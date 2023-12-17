@@ -1,0 +1,1 @@
+# file for image data class
