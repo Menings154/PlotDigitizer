@@ -1,4 +1,4 @@
-__all__= ["image"]
+__all__= ["image", "coordinates"]
 
 #from .image import importtest
 #importtest = image.importtest
