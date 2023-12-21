@@ -1,5 +1,5 @@
 def crop(img, roi):
-    img.croped_data = img.data[roi.x:roi.x+roi.width, roi.y:roi.y+roi.length]
+    img.croped_data = img.data[roi.x:roi.x+roi.width, roi.y:roi.y+roi.height, :]
 
 def find_rescaling_parameters(a, b):
     m = (b["value"]-a["value"]) / (b["pixel"]-a["pixel"])
@@ -17,4 +17,4 @@ def rescale(final_data, para_x, para_y, roi):
 def rescale_final_data(final_data, coordinates, roi):
     para_x = find_rescaling_parameters(coordinates.x1, coordinates.x2)
     para_y = find_rescaling_parameters(coordinates.y1, coordinates.y2)
-    return rescale(final_data, para_x, para_y)
+    return rescale(final_data, para_x, para_y, roi)

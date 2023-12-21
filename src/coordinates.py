@@ -9,7 +9,7 @@ class Coordinates:
 
 
 def ask_coordinate():
-    pixel = input("Please write a pixel number") # das müsste man viel sicherer machen
-    value = input("Please give the corresponding value")
+    pixel = int(input("Please write a pixel number")) # das müsste man viel sicherer machen
+    value = int(input("Please give the corresponding value"))
     return {"pixel": pixel,
             "value": value}
